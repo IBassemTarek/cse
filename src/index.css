@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: ScheherazadeNew;
+  src: url("./assets/fonts/ScheherazadeNew.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --main-color: teal;
+  --font-color: #212121;
+  --background-color: #f5f5f5;
+
+  --box-shadow-1: 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --box-border-radius-1: 0px 0px 14px 14px;
+  --box-border-radius-2: 14px;
+}
+
+* {
+  font-family: ScheherazadeNew;
+  margin: 0px;
 }
