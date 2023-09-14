@@ -1,8 +1,9 @@
-import { Component } from "react";
-import { MenuData } from "./MenuData";
-import Logo from "../assets/imgs/cse_logo.png";
-import "./NavbarStyles.css";
-import "../index.css";
+import { Component } from 'react';
+import { MenuData } from './MenuData';
+import Logo from '../assets/imgs/cse_logo.png';
+import './NavbarStyles.css';
+import '../index.css';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -15,15 +16,19 @@ class Navbar extends Component {
         <ul className="nav-menu">
           {MenuData.map((item, index) => {
             return (
-              <li key={index}>
-                <a href={item.url} className={item.className}>
-                  {item.title}
-                </a>
-              </li>
+              <Link to={item.url}>
+                <li key={index}>
+                  <a href={item.url} className={item.className}>
+                    {item.title}
+                  </a>
+                </li>
+              </Link>
             );
           })}
         </ul>
-        <h6 className="h6-style">تسجيل الخروج</h6>
+        <Link to={'/login'}>
+          <h6 className="h6-style">تسجيل الخروج</h6>
+        </Link>
       </nav>
     );
   }

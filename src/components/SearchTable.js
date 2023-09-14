@@ -1,13 +1,14 @@
-import { React, Component } from "react";
-import "./SearchTableStyles.css";
-import { styled } from "@mui/material/styles";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import { React, Component } from 'react';
+import './SearchTableStyles.css';
+import { styled } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
 
 class SearchTable extends Component {
   render() {
@@ -92,7 +93,7 @@ class SearchTable extends Component {
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: "#F7F7F7",
+    backgroundColor: '#F7F7F7',
     color: theme.palette.common.black,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -105,7 +106,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   //   backgroundColor: theme.palette.action.hover,
   // },
   // hide last border
-  "&:last-child td, &:last-child th": {
+  '&:last-child td, &:last-child th': {
     border: 0,
   },
 }));
@@ -115,31 +116,31 @@ function createData(id, name) {
 }
 
 const rows = [
-  createData(1, "Frozen yoghurt"),
-  createData(1, "Ice cream sandwich"),
-  createData(1, "Eclair"),
-  createData(1, "Cupcake"),
-  createData(1, "Gingerbread"),
-  createData(1, "Frozen yoghurt"),
-  createData(1, "Ice cream sandwich"),
-  createData(1, "Eclair"),
-  createData(1, "Cupcake"),
-  createData(1, "Gingerbread"),
-  createData(1, "Frozen yoghurt"),
-  createData(1, "Ice cream sandwich"),
-  createData(1, "Eclair"),
-  createData(1, "Cupcake"),
-  createData(1, "Gingerbread"),
-  createData(1, "Frozen yoghurt"),
-  createData(1, "Ice cream sandwich"),
-  createData(1, "Eclair"),
-  createData(1, "Cupcake"),
-  createData(1, "Gingerbread"),
-  createData(1, "Frozen yoghurt"),
-  createData(1, "Ice cream sandwich"),
-  createData(1, "Eclair"),
-  createData(1, "Cupcake"),
-  createData(1, "Gingerbread"),
+  createData(1, 'Frozen yoghurt'),
+  createData(1, 'Ice cream sandwich'),
+  createData(1, 'Eclair'),
+  createData(1, 'Cupcake'),
+  createData(1, 'Gingerbread'),
+  createData(1, 'Frozen yoghurt'),
+  createData(1, 'Ice cream sandwich'),
+  createData(1, 'Eclair'),
+  createData(1, 'Cupcake'),
+  createData(1, 'Gingerbread'),
+  createData(1, 'Frozen yoghurt'),
+  createData(1, 'Ice cream sandwich'),
+  createData(1, 'Eclair'),
+  createData(1, 'Cupcake'),
+  createData(1, 'Gingerbread'),
+  createData(1, 'Frozen yoghurt'),
+  createData(1, 'Ice cream sandwich'),
+  createData(1, 'Eclair'),
+  createData(1, 'Cupcake'),
+  createData(1, 'Gingerbread'),
+  createData(1, 'Frozen yoghurt'),
+  createData(1, 'Ice cream sandwich'),
+  createData(1, 'Eclair'),
+  createData(1, 'Cupcake'),
+  createData(1, 'Gingerbread'),
 ];
 
 function CustomizedTables() {
@@ -159,7 +160,9 @@ function CustomizedTables() {
           {rows.map((row) => (
             <StyledTableRow key={row.id}>
               <StyledTableCell>{row.id}</StyledTableCell>
-              <StyledTableCell>{row.name}</StyledTableCell>
+              <StyledTableCell>
+                {<Link to={`/profile`}>{row.name}</Link>}
+              </StyledTableCell>
               {/* <StyledTableCell align="right">{row.id}</StyledTableCell>
               <StyledTableCell align="right">{row.name}</StyledTableCell> */}
             </StyledTableRow>

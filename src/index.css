@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: ScheherazadeNew;
-  src: url("./assets/fonts/ScheherazadeNew.ttf");
+  src: url('./assets/fonts/ScheherazadeNew.ttf');
 }
 
 :root {
